@@ -52,7 +52,7 @@ void setup() {
 
   WiFi.begin("Wokwi-GUEST", ""); // Conexão à rede WiFi aberta com SSID Wokwi-GUEST
 
-  while (WiFi.status() != WL_CONNECT_FAILED) {
+  while (WiFi.status() == WL_CONNECT_FAILED) {
     delay(100);
     Serial.print(".");
   }
