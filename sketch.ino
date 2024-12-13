@@ -77,6 +77,9 @@ void loop() {
     Serial.println(ldr_status);
     if (millis_atual - amarelo_piscante_ultima_troca > 1000) {
       digitalWrite(led_amarelo, !digitalRead(led_amarelo));
+      digitalWrite(led_amarelo, LOW);
+      digitalWrite(led_vermelho, LOW);
+      digitalWrite(led_verde, LOW);
       amarelo_piscante_ultima_troca = millis_atual;
     }
 
