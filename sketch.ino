@@ -69,7 +69,7 @@ void loop() {
   int ldr_status=analogRead(ldr);
   const int millis_atual = millis();
 
-  if(ldr_status<=limite_leitura){
+  if(ldr_status>=limite_leitura){
     if (status_semaforo != 3){
       status_semaforo = 3;
     }
