@@ -154,7 +154,7 @@ void loop() {
         status_semaforo = 0;
         ultima_troca_semaforo = millis_atual;
       }
-      if (millis_atual - ultima_troca_semaforo > tempo_amarelo_millis) {
+      if (millis_atual - ultima_troca_semaforo > tempo_vermelho_millis) {
         status_semaforo = 0;
         ultima_troca_semaforo = millis_atual;
       }

@@ -82,12 +82,12 @@
     [ "r4:1", "esp:GND.1", "black", [ "h-0.85", "v95.45", "h192", "v-28.8" ] ],
     [ "btn1:2.r", "esp:18", "gray", [ "h38.6", "v29" ] ],
     [ "ldr1:GND", "esp:GND.1", "black", [ "h19.2", "v239.6", "h211.2", "v-48" ] ],
-    [ "btn1:1.r", "esp:RST", "red", [ "v0", "h57.8", "v-28.8" ] ],
-    [ "r1:1", "esp:19", "black", [ "v0" ] ],
     [ "ldr1:AO", "esp:4", "orange", [ "h0" ] ],
     [ "ldr1:VCC", "esp:5V", "red", [ "h57.6", "v192.18" ] ],
     [ "r3:2", "esp:GND.1", "black", [ "v0" ] ],
-    [ "led2:A", "esp:41", "green", [ "h19.2", "v-143.82" ] ]
+    [ "led2:A", "esp:41", "green", [ "h19.2", "v-143.82" ] ],
+    [ "r1:1", "esp:GND.4", "black", [ "v0" ] ],
+    [ "btn1:1.r", "esp:5V", "red", [ "v0" ] ]
   ],
   "dependencies": {}
 }
