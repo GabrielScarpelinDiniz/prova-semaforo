@@ -93,7 +93,7 @@ void loop() {
       digitalWrite(led_amarelo, LOW);
       digitalWrite(led_vermelho, LOW);
       digitalWrite(led_verde, HIGH);
-      if (millis_atual - ultima_troca_semaforo > tempo_verde_millis) {
+      if (millis_atual - ultima_troca_semaforo > tempo_verde_millis) { 
         status_semaforo = 1;
         ultima_troca_semaforo = millis_atual;
       }
@@ -152,7 +152,6 @@ void loop() {
       } else if (millis_atual - primeiro_high_botao > 1000 && vermelho_botao_contador >= 1) {
         status_semaforo = 0;
         ultima_troca_semaforo = millis_atual;
-        delay(1000);
       }
       if (millis_atual - ultima_troca_semaforo > tempo_amarelo_millis) {
         status_semaforo = 0;
