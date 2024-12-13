@@ -89,12 +89,12 @@ void loop() {
     }
 
     if (status_semaforo == 0) {
-      Serial.println("VERDE LIGADO");
       digitalWrite(led_amarelo, LOW);
       digitalWrite(led_vermelho, LOW);
       digitalWrite(led_verde, HIGH);
       if (millis_atual - ultima_troca_semaforo > tempo_verde_millis) { 
         status_semaforo = 1;
+        Serial.println("VERDE LIGADO");
         ultima_troca_semaforo = millis_atual;
       }
     }
@@ -105,19 +105,20 @@ void loop() {
       digitalWrite(led_verde, LOW);
       if (millis_atual - ultima_troca_semaforo > tempo_amarelo_millis) {
         status_semaforo = 2;
+        Serial.println("VERMELHO LIGADO");
         ultima_troca_semaforo = millis_atual;
         vermelho_botao_contador = 0;
         primeiro_high_botao = 0;
       }
     }
     if (status_semaforo == 2) {
-      Serial.println("VERMELHO LIGADO");
       digitalWrite(led_amarelo, LOW);
       digitalWrite(led_vermelho, HIGH);
       digitalWrite(led_verde, LOW);
       estado_botao = leitura_botao(millis_atual);
 
       if (estado_botao && vermelho_botao_contador == 0) {
+        Serial.println("VERDE LIGADO");
         vermelho_botao_contador += 1;
         primeiro_high_botao = millis_atual;
       }
